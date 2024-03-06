@@ -3,7 +3,7 @@
 	--border-radius: 12px;
   
 	/* font */
-	--font-print: dnp-shuei-nmincho-std, sans-serif;
+	--font-print: "dnp-shuei-nmincho-std", sans-serif;
   
 	/* color palette */
 	--table-color: #745434;
