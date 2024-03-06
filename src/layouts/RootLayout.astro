@@ -23,6 +23,7 @@ import '../styles/global.css';
 				<div class="book">
 					<slot />
 				</div>
+				
 			</div>
 			<Footer />
 		</main>
@@ -35,15 +36,25 @@ import '../styles/global.css';
 			background-color: var(--table-color);
 			min-height: 100vh;
 			font-family: dnp-shuei-nshogomincho-std, sans-serif;
+			font-weight: 400;
+			font-style: normal;
+		}
+		.book:before {
+			content: "";
+			display: block;
+			position: absolute;
+			top: -0.1rem; 
+			left: 0;
+			width: 100%;
+			height: 0.2rem; 
+			background: var(--paper-color);
+			z-index: 1;
 		}
 		.book {
 			position: relative;
 			background-color: var(--paper-color);
-			padding: 0;
-			border-top: 1rem solid var(--book-color);
-			border-bottom: 1rem solid var(--book-color);
-			border-left: none;
-			border-right: none;
+			padding: 0.3rem 0.8rem 3rem 1rem;
+			margin: 0;
 		}
 	</style>
 </html>

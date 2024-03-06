@@ -3,13 +3,14 @@
 	--border-radius: 12px;
   
 	/* font */
-	--font-print: dnp-shuei-nshogomincho-std, sans-serif;
+	--font-print: dnp-shuei-nmincho-std, sans-serif;
   
 	/* color palette */
 	--table-color: #745434;
 	--book-color: #254D57;
 	--paper-color: #F7F6EB;
 	--label-color: #65C89B;
+	--label-color-2: #D164C6;
 	--ribbon-color: #5F0000;
 	--moji-color: #202020;
 }

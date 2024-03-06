@@ -8,19 +8,37 @@ import '../styles/global.css';
 	<nav>
 		<a href="/" class="title">{SITE_TITLE}</a>
 		<div class="internal-links">
-			<HeaderLink href="/">Home</HeaderLink>
-			<HeaderLink href="/about">About</HeaderLink>
+			<HeaderLink href="/blog" class="blog-button">Blog</HeaderLink>
+			<HeaderLink href="/about" class="about-button">About</HeaderLink>
 		</div>
 	</nav>
+	<div class="svg-container">
+		<!-- paper svg curve -->
+		<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 435 32.37">
+			<defs>
+				<style>
+					.cls-1 {
+					fill: var(--paper-color);
+					stroke-width: 0px;
+					}
+				</style>
+				<filter id="shadow" height="130%">
+					<feDropShadow dx="4" dy="4" stdDeviation="4" />
+				</filter>
+			</defs>
+			<path class="cls-1" d="M435,14.12S7.47-17.65,0,14.12v18.25c7.47-31.76,435,0,435,0V14.12Z" filter="url(#shadow)"/>
+		</svg>
+	</div>
 </header>
 <style>
 	header {
+		position: relative;
 		font-size: 0.5rem;
+		display: flex;
+		flex-direction: column;
 	}
 	.title {
-		font-style: normal;
-		font-weight: bold;
-		font-size: 0.5rem;
+		font-size: 1rem;
 		text-align: left;
 		color: var(--paper-color);
 	}
@@ -30,13 +48,44 @@ import '../styles/global.css';
 		justify-content: space-between;
 	}
 	nav a {
-		padding: 0.5rem 0.3rem;
-		color: var(--moji-color);
-		border-bottom: 4px solid transparent;
+		padding: 0.5rem 0.6rem;
 		text-decoration: none;
+		text-align: center;
 	}
-	nav a.active {
-		text-decoration: none;
-		border-bottom-color: var(--tag-color);
+	.svg-container {
+		position: hidden;
+		overflow: hidden;
+		height: 0.6rem;
+		z-index: 4;
+	}
+	.blog-button {
+		position: absolute;
+		background-color: var(--label-color);
+		color: var(--ribbon-color);
+		width: 2.8rem;
+		height: 4rem;
+		z-index: 5;
+		transform: translate(-7.5rem, -0.45rem) rotate(4deg);
+		z-index: 5;
+	}
+	.blog-button::before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		box-shadow: 0.07rem -0.05rem .09rem black;
+		z-index: 3;
+		transform: translate(0,0);
+	}
+	.about-button {
+		position: absolute;
+		background-color: var(--label-color-2);
+		color: var(--book-color);
+		width: 2.6rem;
+		height: 4rem;
+		transform: translate(-3.5rem, -0.1rem) rotate(3deg);
+		box-shadow: 0.07rem -0.05rem .15rem black;
 	}
 </style>
