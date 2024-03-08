@@ -19,10 +19,6 @@ const { Content } = await post.render();
 
 <RootLayout>
 	<BlogPost {...post.data}>
-		<Content />
+		<Content class="text"/>
 	</BlogPost>
 </RootLayout>
-
-<BlogPost {...post.data}>
-	<Content />
-</BlogPost>

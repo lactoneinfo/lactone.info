@@ -3,10 +3,10 @@
 	--border-radius: 12px;
   
 	/* font */
-	--font-print: "dnp-shuei-nmincho-std", sans-serif;
+	--font-print: 'Noto Serif JP', serif;
   
 	/* color palette */
-	--table-color: #745434;
+	--table-color: #DCE9E1;
 	--book-color: #254D57;
 	--paper-color: #F7F6EB;
 	--label-color: #65C89B;

@@ -4,8 +4,16 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import RootLayout from '../layouts/RootLayout.astro';
+import PostCards from '../components/PostCards.astro';
 ---
 
 <RootLayout>
-	ああああああああああああああああああああああああああああああああああああああ
+	<h1 class="title">LATEST ARTICLE</h1>
+	<PostCards />
+	<style>
+		.title {
+			padding-left: 1rem;
+			padding-bottom: 2.8rem;
+		}
+	</style>
 </RootLayout>

@@ -20,10 +20,33 @@ import '../styles/global.css';
 		<main>
 			<div class="headpart">
 				<Header />
-				<div class="book">
+				<div class="main">
 					<slot />
 				</div>
-				
+				<svg id="2" data-name="bookend" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 435 37.79" class="bookend">
+					<defs>
+						<style>
+						.cls-2 {
+							fill: #aaa;
+						}
+					
+						.cls-2, .cls-3, .cls-4 {
+							stroke-width: 0px;
+						}
+					
+						.cls-3 {
+							fill: var(--paper-color);
+						}
+					
+						.cls-4 {
+							fill: var(--table-color);
+						}
+						</style>
+					</defs>
+					<polygon class="cls-3" points="0 31.03 0 0 435 0 435 12.9 0 31.03"/>
+					<path class="cls-4" d="M0,37.79h435v-15.25S9.66-5.67,0,37.79Z"/>
+					<path class="cls-2" d="M435,12.9S12.95-8.03,0,31.03v6.76C0,0,435,22.55,435,22.55v-9.65Z"/>
+				</svg>
 			</div>
 			<Footer />
 		</main>
@@ -39,22 +62,28 @@ import '../styles/global.css';
 			font-weight: 400;
 			font-style: normal;
 		}
-		.book:before {
-			content: "";
-			display: block;
-			position: absolute;
-			top: -0.1rem; 
-			left: 0;
-			width: 100%;
-			height: 0.2rem; 
-			background: var(--paper-color);
-			z-index: 1;
+		.headpart {
+			background-color: var(--paper-color);
+			padding-bottom: 0;
 		}
-		.book {
+		.bookend {
+			display: block;
+		}
+		.main {
 			position: relative;
 			background-color: var(--paper-color);
-			padding: 0.3rem 0.8rem 3rem 1rem;
+			padding: 2.3rem 0.8rem 4rem 1.6rem;
 			margin: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
 		}
+		@media (min-width: 768px) {
+		.headpart {
+			max-width: 768px;
+			margin: 0 auto;
+		}
+}
 	</style>
 </html>

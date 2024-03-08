@@ -3,6 +3,10 @@
 // all pages through the use of the <BaseHead /> component.
 import '../styles/global.css';
 
+// Load Font
+import '@fontsource/noto-serif-jp/400.css';
+import '@fontsource/noto-serif-jp/700.css';
+
 interface Props {
 	title: string;
 	description: string;
@@ -22,45 +26,6 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
 <meta name="creator" content="lactoneinfo" />
 <meta name="publisher" content="lactoneinfo" />
 <meta name="generator" content={Astro.generator} />
-
-<!-- Load Font -->
-<script>
-	(function(d) {
-	var config = {
-	kitId: 'upk1lkl',
-	scriptTimeout: 3000,
-	async: true
-	};
-
-	var Typekit: any;
-
-	var h = d.documentElement;
-	var t = setTimeout(function() {
-	h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
-	}, config.scriptTimeout);
-
-	var tk = d.createElement("script");
-	tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
-	tk.async = true;
-
-	tk.onload = function() {
-	clearTimeout(t);
-	try {
-		Typekit.load(config);
-	} catch(e) {}
-	};
-
-	tk.onerror = function() {
-	};
-
-	var s = d.getElementsByTagName("script")[0];
-	if (s.parentNode) {
-	s.parentNode.insertBefore(tk, s);
-	}
-
-	h.className += " wf-loading";
-})(document);
-</script>
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />

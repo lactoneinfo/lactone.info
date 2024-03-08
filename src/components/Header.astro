@@ -12,35 +12,30 @@ import '../styles/global.css';
 			<HeaderLink href="/about" class="about-button">About</HeaderLink>
 		</div>
 	</nav>
-	<div class="svg-container">
-		<!-- paper svg curve -->
-		<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 435 32.37">
-			<defs>
-				<style>
-					.cls-1 {
-					fill: var(--paper-color);
-					stroke-width: 0px;
-					}
-				</style>
-				<filter id="shadow" height="130%">
-					<feDropShadow dx="4" dy="4" stdDeviation="4" />
-				</filter>
-			</defs>
-			<path class="cls-1" d="M435,14.12S7.47-17.65,0,14.12v18.25c7.47-31.76,435,0,435,0V14.12Z" filter="url(#shadow)"/>
-		</svg>
-	</div>
+	<!-- paper svg curve -->
+	<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 435 14.12" class="svg-container">
+		<defs>
+			<style>
+			.cls-1 {
+				fill: var(--paper-color);
+				stroke-width: 0px;
+			}
+			</style>
+		</defs>
+		<path class="cls-1" d="M435,14.12S7.47-17.65,0,14.12h435Z"/>
+	</svg>
 </header>
 <style>
 	header {
 		position: relative;
-		font-size: 0.5rem;
 		display: flex;
 		flex-direction: column;
+		background-color: var(--table-color);
 	}
 	.title {
-		font-size: 1rem;
+		font-size: 1.2rem;
 		text-align: left;
-		color: var(--paper-color);
+		color: var(--moji-color);
 	}
 	nav {
 		display: flex;
@@ -56,26 +51,23 @@ import '../styles/global.css';
 		z-index: 10;
 	}
 	.svg-container {
-		position: hidden;
-		overflow: hidden;
-		height: 0.6rem;
 		z-index: 8;
 	}
 	.blog-button {
 		position: absolute;
 		background-color: var(--label-color);
 		color: var(--ribbon-color);
-		width: 2.8rem;
-		height: 4rem;
-		transform: translate(-7.5rem, -0.45rem) rotate(4deg);
+		width: 3.6rem;
+		height: 6rem;
+		transform: translate(-9.7rem, -1rem) rotate(4deg);
 	}
 	.about-button {
 		position: absolute;
 		background-color: var(--label-color-2);
 		color: var(--book-color);
-		width: 2.6rem;
-		height: 4rem;
-		transform: translate(-3.5rem, -0.1rem) rotate(3deg);
+		width: 4rem;
+		height: 6rem;
+		transform: translate(-5rem, -0.9rem) rotate(3deg);
 		/* box-shadow: 0.07rem -0.05rem .15rem black; */
 	}
 </style>

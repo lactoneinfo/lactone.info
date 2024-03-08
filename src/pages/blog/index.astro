@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import FormattedDate from '../../components/FormattedDate.astro';
 import RootLayout from '../../layouts/RootLayout.astro';
+import PostCards from '../../components/PostCards.astro';
 
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
@@ -10,69 +11,57 @@ const posts = (await getCollection('blog')).sort(
 
 
 <RootLayout>
+	<div>
+		<h1 class="title">Blog</h1>
+		<PostCards />
+	</div>
 	<style>
-		main {
-			width: 960px;
+		.title {
+			padding-left: 1rem;
+			padding-bottom: 2.8rem;
+			text-align: center;
 		}
-		ul {
+		.postlist {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-auto-rows: auto;
+			grid-gap: 1rem;
+			list-style: none;
+		}
+		.postlink {
 			display: flex;
 			flex-direction: column;
-			list-style-type: none;
-			margin: 0;
-			padding: 0;
-		}
-		ul li {
-			width: 100%;
-		}
-		ul li * {
 			text-decoration: none;
-			transition: 0.2s ease;
-		}
-		ul li a {
-			display: block;
-		}
-		ul {
-			gap: 0.5em;
-		}
-		ul li {
-			display: flex;
-			flex-direction: row;
 			align-items: center;
 		}
-		ul li a {
+		.picimage {
+			display: inline-block;
 			width: 100%;
-			display: flex;
-		}
-		ul li img {
-			width: 50%;
 			height: auto;
+			aspect-ratio: 4 / 3;
+			position: relative;
 			object-fit: cover;
-			margin: 0 0.1rem;
+			transition: transform 0.3s ease;
+		}
+		.picimage:hover {
+			transform: scale(1.05);
+		}
+		.info {
+			width:100%;
+			min-height: 100%;
+			text-align: right;
+			color: var(--moji-color);
+		}
+		.info:hover {
+			opacity: .4;
 		}
 		.articletitle {
-			font-size: 0.7rem;
+			font-size: 1.2rem;
+			text-align: left;
 		}
 		.date {
-			font-size: 0.4rem;
+			font-size: 0.7rem;
+			
 		}
 	</style>
-	<section>
-		<ul>
-			{
-				posts.map((post) => (
-					<li>
-						<a href={`/blog/${post.slug}/`}>
-							<img width={720} height={360} src={post.data.heroImage} alt="" />
-							<div class="info">
-								<div class="articletitle">{post.data.title}</div>
-								<p class="date">
-									<FormattedDate date={post.data.pubDate} />
-								</p>	
-							</div>
-						</a>
-					</li>
-				))
-			}
-		</ul>
-	</section>
 </RootLayout>
