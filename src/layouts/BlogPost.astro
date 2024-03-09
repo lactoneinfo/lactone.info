@@ -58,7 +58,8 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		line-height: 1;
 	}
 	.title {
-		margin-bottom: 2.5rem;
+		margin-top: 3rem;
+		margin-bottom: 3rem;
 	}
 	.date {
 		text-align: right;
@@ -66,5 +67,20 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 	}
 	.last-updated-on {
 		font-style: italic;
+	}
+</style>
+<style is:global>
+	p {
+		padding: 1rem 0.5rem 2rem 0.5rem;
+		line-height: 2rem;
+	}
+	ul {
+		padding: 0 0 0 3rem;
+	}
+	li {
+		margin: 0.5rem;
+	}
+	li p {
+		padding-bottom: 0;
 	}
 </style>
