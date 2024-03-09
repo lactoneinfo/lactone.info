@@ -1,7 +1,7 @@
 ---
 title: '個人サイトを開設した'
 description: 'ぽゃんのarXiv, PoyarXiv'
-pubDate: 'Mar 08 2024'
+pubDate: 'Mar 09 2024'
 heroImage: '/blog-placeholder-3.jpg'
 ---
 
